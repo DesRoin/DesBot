@@ -3,8 +3,6 @@ package main
 import (
   "fmt"
   "os"
-  "time"
-
   "github.com/BurntSushi/toml"
 )
 
@@ -18,8 +16,7 @@ type Post struct {
 
 func LoadPost() (Post, error) {
   var post Post
-  currentTime := time.Now()
-  postFileName := fmt.Sprintf("date-posts/%s/%s.toml", currentTime.Format("2006"), currentTime.Format("2006-01-02"))
+  postFileName := "Posts/example.toml"
 
   _, fileExistErr := os.Stat("./" + postFileName)
 

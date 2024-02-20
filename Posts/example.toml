@@ -1,0 +1,5 @@
+text = "First Post with a simple test plot"
+tags = ['data', 'gnuplot', 'statistics']
+asset = 'test.png'
+assetAlt = 'Simple Plot'
+credits = 'Me'
