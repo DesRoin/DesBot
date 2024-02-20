@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"log"
+)
 	
 
 func main() {
-    fmt.Println("hello world")
+  envs, error := GetConfig()
+
+  if error != nil {
+    log.Fatalf("Error loading .env or ENV: %v", error)
+  }
+
+  fmt.Printf("%v", envs)
 }
