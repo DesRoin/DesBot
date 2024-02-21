@@ -5,7 +5,7 @@ import (
 	"log"
 	"context"
 	"github.com/mattn/go-mastodon"
-	 "os"
+	"os"
 )
 	
 
@@ -68,8 +68,8 @@ func main() {
   status,err := c.PostStatus(context.Background(), &toot)
   _ = status
 
-if err != nil {
-  log.Fatalf("%#v\n", err)
-}
+  if err != nil {
+    log.Fatalf("%#v\n", err)
+  }
  
 }
